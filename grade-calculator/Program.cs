@@ -38,7 +38,15 @@ namespace grade_calculator
                 }
                 else if(grades[i] >= 80 && grades[i] <= 89)
                 {
-                    Console.WriteLine("This grade is A!");
+                    Console.WriteLine("This grade is B!");
+                }
+                else if (grades[i] >= 60 && grades[i] <= 79)
+                {
+                    Console.WriteLine("This grade is C!");
+                }
+                else if (grades[i] >= 65 && grades[i] <= 69)
+                {
+                    Console.WriteLine("This grade is D!");
                 }
             }
         }
