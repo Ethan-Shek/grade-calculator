@@ -9,24 +9,18 @@ namespace grade_calculator
     {
         static void Main(string[] args)
         {
+            // intialize variables
             string student = "Ethan";
             int[] grades = new int[10];
             int avg = 0;
-            grades[0] = 100;
-            grades[1] = 92;
-            grades[2] = 87;
-            grades[3] = 200;
-            grades[4] = -20;
-            grades[5] = 52;
-            grades[6] = 82;
-            grades[7] = 75;
-            grades[8] = 67;
-            grades[9] = 88;
+            int[] grades = { 100, 92, 87, 200, -20, 52, 82, 75, 67, 88 };
 
+            // Intro to the program: welcome intro
             Console.WriteLine("Greeting student! Welcome " + student + "!");
             Console.WriteLine("Here are your grades: ");
 
-            for(int i = 0; i < grades.Length; i++)
+            // loop that iterates through the array of grades by grading based off a range
+            for (int i = 0; i < grades.Length; i++)
             {
                 Console.WriteLine(grades[i]);
                 if (grades[i] >= 90 && grades[i] <= 100)
@@ -34,6 +28,7 @@ namespace grade_calculator
                     Console.WriteLine("This grade is A!");
                     if (grades[i] == 100)
                     {
+                        // if a 100 is scored a special message is displayed
                         Console.WriteLine("WOW! A perfect score!");
                     }
                 }
@@ -55,9 +50,14 @@ namespace grade_calculator
                 }
                 else
                 {
+                    //if a negative is scored a special message is displayed
                     Console.WriteLine("This is out of the range of 0-100. How did you even get this grade?");
                 }
             }
+
+            /* this loop will iterate through the length of the arrayand add them all together 
+            which is stored in the avg variable that divide by the length after the for loop is finsihed
+            iterating and then in the console it will print out the avg along with a concluding sentence*/
             for (int z = 0; z < grades.Length; z++)
             {
                 avg += grades[z];
